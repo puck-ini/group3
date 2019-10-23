@@ -99,4 +99,20 @@ public class Course {
     public void setExid(Integer exid) {
         this.exid = exid;
     }
+
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "cid=" + cid +
+                ", uid=" + uid +
+                ", cname='" + cname + '\'' +
+                ", csyear='" + csyear + '\'' +
+                ", semester='" + semester + '\'' +
+                ", ctype='" + ctype + '\'' +
+                ", classdate='" + classdate + '\'' +
+                ", classplace='" + classplace + '\'' +
+                ", exid=" + exid +
+                '}';
+    }
 }
