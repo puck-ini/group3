@@ -38,4 +38,13 @@ public class ClassRoom {
     public void setIfempty(Boolean ifempty) {
         this.ifempty = ifempty;
     }
+
+    @Override
+    public String toString(){
+        return "Book{" +
+                "crid=" + crid +
+                ", crname='" + crname + '\'' +
+                ", ifempty='" + ifempty + '\'' +
+                '}';
+    }
 }

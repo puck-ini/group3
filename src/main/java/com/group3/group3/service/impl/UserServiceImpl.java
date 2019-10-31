@@ -86,13 +86,15 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
+
     @Override
-    public void deleteOne(Integer id) {
+    public User deleteOne(Integer id) {
         getOne(id);
         try {
             userRepository.deleteById(id);
         }catch (Exception e){
             throw new HandleException(ExceptionEnum.UNKNOWN_ERROR);
         }
+        return null;
     }
 }

@@ -48,4 +48,14 @@ public class Evaluation {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
+    @Override
+    public String toString(){
+        return "Department{"+
+                "evid=" + evid +
+                ", uid='" + uid + '\'' +
+                ", evgrade='" + evgrade + '\'' +
+                ", comment='" + comment + '\'' +
+                '}';
+    }
 }

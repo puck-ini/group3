@@ -1,9 +1,6 @@
 package com.group3.group3.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Grade {
@@ -11,11 +8,13 @@ public class Grade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer gid;
 
-    private Integer cid;
+    private String cname;
 
     private Integer uid;
 
-    private Integer grade;
+    private String username;
+
+    private Double grade;
 
     private Integer attendance;
 
@@ -29,12 +28,12 @@ public class Grade {
         this.gid = gid;
     }
 
-    public Integer getCid() {
-        return cid;
+    public String getCname() {
+        return cname;
     }
 
-    public void setCid(Integer cid) {
-        this.cid = cid;
+    public void setCname(String cname) {
+        this.cname = cname;
     }
 
     public Integer getUid() {
@@ -45,11 +44,19 @@ public class Grade {
         this.uid = uid;
     }
 
-    public Integer getGrade() {
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Double getGrade() {
         return grade;
     }
 
-    public void setGrade(Integer grade) {
+    public void setGrade(Double grade) {
         this.grade = grade;
     }
 
@@ -67,5 +74,17 @@ public class Grade {
 
     public void setAbsence(Integer absence) {
         this.absence = absence;
+    }
+
+    @Override
+    public String toString(){
+        return "Grade{" +
+                "gid=" + gid +
+                ", cname='" + cname + '\'' +
+                ", uid='" + uid + '\'' +
+                ", grade='" + grade + '\'' +
+                ", attendance='" + attendance + '\'' +
+                ", absence='" + absence + '\''+
+                '}';
     }
 }

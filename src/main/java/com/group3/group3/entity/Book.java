@@ -16,7 +16,7 @@ public class Book {
 
     private String lend;
 
-    private Integer uid;
+    private String userName;
 
     private Date lenDate;
 
@@ -46,12 +46,12 @@ public class Book {
         this.lend = lend;
     }
 
-    public Integer getUid() {
-        return uid;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Date getLenDate() {
@@ -68,5 +68,17 @@ public class Book {
 
     public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
+    }
+
+    @Override
+    public String toString(){
+        return "Book{" +
+                "bookid=" + bookid +
+                ", book_name='" + bookName + '\'' +
+                ", lend='" + lend + '\'' +
+                ", len_date='" + lenDate + '\'' +
+                ", return_date='" + returnDate + '\'' +
+                ", userName='" + userName + '\'' +
+                '}';
     }
 }
