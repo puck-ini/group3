@@ -30,4 +30,12 @@ public class Department {
     public void setDename(String dename) {
         this.dename = dename;
     }
+
+    @Override
+    public String toString(){
+        return "Department{"+
+                "deid=" + deid +
+                ", dename='" + dename + '\'' +
+                '}';
+    }
 }

@@ -13,6 +13,8 @@ public class Achievement {
 
     private Integer uid;
 
+    private String username;
+
     private String aeInformation;
 
     public Integer getAeid() {
@@ -29,6 +31,14 @@ public class Achievement {
 
     public void setUid(Integer uid) {
         this.uid = uid;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getAeInformation() {

@@ -1,10 +1,12 @@
 package com.group3.group3.controller;
 
 
+
 import com.group3.group3.entity.Result;
 import com.group3.group3.entity.user.User;
 import com.group3.group3.enums.ExceptionEnum;
 import com.group3.group3.exception.HandleException;
+import com.group3.group3.service.impl.CardServiceImpl;
 import com.group3.group3.service.impl.UserServiceImpl;
 import com.group3.group3.util.CookieUtil;
 import com.group3.group3.util.ResultUtil;
@@ -17,13 +19,17 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
     @Autowired
-    private UserServiceImpl userService;
+    public UserServiceImpl userService;
+    public CardServiceImpl cardService;
+
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -107,9 +113,9 @@ public class UserController {
         return ResultUtil.success(user1);
     }
 
-    @GetMapping("/getinfo")
+    @GetMapping("/getInfo")
     public Result getInfo(HttpServletRequest request){
-        String username = null;
+        String username;
         try {
             Claims claims = TokenUtil.parseToken(CookieUtil.get(request, "Token").getValue());
             username = claims.getId();
@@ -119,7 +125,6 @@ public class UserController {
         User user = userService.getOne(username);
         return ResultUtil.success(user);
     }
-
 
     @GetMapping("/delete")
     public Result delete(HttpServletRequest request){
@@ -136,5 +141,15 @@ public class UserController {
     }
 
     
+
+    @GetMapping("/getAllUser")
+    public Result getAllUser(){
+        List<User> users = userService.getAll();
+        return ResultUtil.success(users);
+    }
+
+
+
+
 
 }

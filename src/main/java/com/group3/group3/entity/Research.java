@@ -13,6 +13,8 @@ public class Research {
 
     private Integer uid;
 
+    private String username;
+
     private String researchName;
 
     private String researchInformation;
@@ -33,6 +35,14 @@ public class Research {
         this.uid = uid;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getResearchName() {
         return researchName;
     }
@@ -47,5 +57,15 @@ public class Research {
 
     public void setResearchInformation(String researchInformation) {
         this.researchInformation = researchInformation;
+    }
+
+    @Override
+    public String toString(){
+        return "Research{" +
+                "researchid=" + researchid +
+                ", uid='" + uid + '\'' +
+                ", researchName='" + researchName + '\'' +
+                ", researchInformation='" + researchName + '\'' +
+                '}';
     }
 }

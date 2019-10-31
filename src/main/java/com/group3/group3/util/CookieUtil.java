@@ -27,6 +27,15 @@ public class CookieUtil {
         }
     }
 
+    public static Cookie getUid(HttpServletRequest request, Integer uid){
+        Map<String,Cookie> cookieMap = readCookieMap(request);
+        if (cookieMap.containsKey(uid)){
+            return cookieMap.get(uid);
+        }else{
+            return null;
+        }
+    }
+
     /**
      * 封装cookie成map
      * @param request

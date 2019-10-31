@@ -30,7 +30,7 @@ public class UserServiceImplTest {
     private PasswordEncoder passwordEncoder;
     @Test
     public void getOne() throws Exception {
-        Integer id = 2;
+        Integer id = 3;
         User user = userService.getOne(id);
 
 
@@ -38,8 +38,10 @@ public class UserServiceImplTest {
 
     @Test
     public void getOne1() throws Exception {
-        String username = "12";
+        String username = "sds";
         User user = userService.getOne(username);
+        Integer uid = user.getUid();
+        log.info(uid.toString());
         if (user == null){
             log.info("nullll");
         }else {
@@ -51,18 +53,19 @@ public class UserServiceImplTest {
     @Test
     public void getAll() throws Exception {
         List<User> list = userService.getAll();
-        List<String> stringList = new ArrayList<>();
-        stringList.add("string");
-        stringList.add("integer");
-        stringList.add("float");
-        log.info(passwordEncoder.encode("12300"));
-        log.info(stringList.toString());
+//        List<String> stringList = new ArrayList<>();
+//        stringList.add("string");
+//        stringList.add("integer");
+//        stringList.add("float");
+//        log.info(passwordEncoder.encode("12300"));
+        log.info(list.toString());
     }
 
     @Test
     public void insertOne() throws Exception {
         User user = new User();
         user.setUsername("admin");
+        user.setUsername("sks");
         user.setPassword("12300");
         User user1 = userService.insertOne(user);
         List<String> list = new ArrayList<>();
@@ -74,6 +77,7 @@ public class UserServiceImplTest {
 
     @Test
     public void updateOne() throws Exception {
+
         User user = userService.getOne("admin");
         user.setPassword(passwordEncoder.encode("admin"));
         userService.updateOne(user);
@@ -82,6 +86,9 @@ public class UserServiceImplTest {
 
     @Test
     public void delete() throws Exception {
+        Integer id = 2;
+        User user = userService.deleteOne(id);
+
     }
 
 }

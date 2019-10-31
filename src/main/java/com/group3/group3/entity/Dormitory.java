@@ -13,11 +13,21 @@ public class Dormitory {
 
     private String dmname;
 
+    private String username;
+
     private Double light;
 
     private Double water;
 
     private Double internet;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public Integer getDmid() {
         return dmid;
@@ -57,5 +67,16 @@ public class Dormitory {
 
     public void setInternet(Double internet) {
         this.internet = internet;
+    }
+
+    @Override
+    public String toString(){
+        return "Department{"+
+                "dmid=" + dmid +
+                ", dmname='" + dmname + '\'' +
+                ", light='" + light + '\'' +
+                ", water='" + water + '\'' +
+                ", internet='" + internet + '\'' +
+                '}';
     }
 }

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Examnation {
+public class Examination {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer exid;
@@ -48,5 +48,15 @@ public class Examnation {
 
     public void setExdate(Date exdate) {
         this.exdate = exdate;
+    }
+
+    @Override
+    public String toString(){
+        return "Examnation{" +
+                "exid='" + exid + '\'' +
+                ", uid='" + uid + '\'' +
+                ", crid='" + crid + '\'' +
+                ", exdate='" + exdate + '\'' +
+                '}';
     }
 }

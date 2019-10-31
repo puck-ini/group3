@@ -16,6 +16,21 @@ public class CourseServiceImpl implements CourseService{
     }
 
     @Override
+    public Course insertOne(Course course) {
+        return null;
+    }
+
+    @Override
+    public Course updateOne(Course course) {
+        return null;
+    }
+
+    @Override
+    public void deleteOne(Integer id) {
+
+    }
+
+    @Override
     public List<Course> getAll() {
         return null;
     }

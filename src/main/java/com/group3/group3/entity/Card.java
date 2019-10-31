@@ -15,6 +15,8 @@ public class Card {
 
     private Double balance;
 
+    private String username;
+
     public Integer getCardid() {
         return cardid;
     }
@@ -38,4 +40,24 @@ public class Card {
     public void setBalance(Double balance) {
         this.balance = balance;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String toString(){
+        return "Book{" +
+                "cardid=" + cardid +
+                ", balance='" + balance + '\'' +
+                ", uid='" + uid + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
+
+
 }
