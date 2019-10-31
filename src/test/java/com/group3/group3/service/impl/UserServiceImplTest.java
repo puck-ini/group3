@@ -63,7 +63,7 @@ public class UserServiceImplTest {
     public void insertOne() throws Exception {
         User user = new User();
         user.setUsername("admin");
-        user.setPassword(passwordEncoder.encode("12300"));
+        user.setPassword("12300");
         User user1 = userService.insertOne(user);
         List<String> list = new ArrayList<>();
         Object[] objects = list.toArray();
@@ -74,6 +74,10 @@ public class UserServiceImplTest {
 
     @Test
     public void updateOne() throws Exception {
+        User user = userService.getOne("admin");
+        user.setPassword(passwordEncoder.encode("admin"));
+        userService.updateOne(user);
+
     }
 
     @Test

@@ -8,5 +8,11 @@ public interface CourseService {
 
     Course getOne(Integer id);
 
+    Course insertOne(Course course);
+
+    Course updateOne(Course course);
+
+    void deleteOne(Integer id);
+
     List<Course> getAll();
 }

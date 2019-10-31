@@ -120,4 +120,21 @@ public class UserController {
         return ResultUtil.success(user);
     }
 
+
+    @GetMapping("/delete")
+    public Result delete(HttpServletRequest request){
+        String username = null;
+        try {
+            Claims claims = TokenUtil.parseToken(CookieUtil.get(request, "Token").getValue());
+            username = claims.getId();
+        }catch (Exception e){
+            throw new HandleException(ExceptionEnum.UNKNOWN_LOGIN);
+        }
+        User user = userService.getOne(username);
+        userService.deleteOne(user.getUid());
+        return ResultUtil.success();
+    }
+
+    
+
 }
