@@ -16,6 +16,8 @@ public class Activity {
 
     private String name;
 
+    private String username;
+
     private String type;
 
     private String place;
@@ -36,6 +38,14 @@ public class Activity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getType() {

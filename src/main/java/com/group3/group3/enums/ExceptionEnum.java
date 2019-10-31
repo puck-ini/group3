@@ -11,6 +11,8 @@ public enum ExceptionEnum {
     UNKNOWN_USER(1111,"无该用户"),
     NO_EMPTY_CLASSROOM(1117,"该教室已被占用"),
     ERROR_PASSWORD(9635,"密码错误"),
+    EXIST_INFO(1269,"该信息已存在"),
+    EXIST_ACTIVITYINFO(8887,"用户该活动的信息已存在"),
     EXIST_RESEARCHINFO(668,"用户该科研信息已存在"),
     EXIST_USER(6668,"用户已存在"),
     EXIST_GRADE(489,"该学生本门课程的成绩已存在"),
