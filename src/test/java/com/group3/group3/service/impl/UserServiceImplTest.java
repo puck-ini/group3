@@ -65,7 +65,10 @@ public class UserServiceImplTest {
     public void insertOne() throws Exception {
         User user = new User();
         user.setUsername("admin");
+<<<<<<< Updated upstream
         user.setUsername("sks");
+=======
+>>>>>>> Stashed changes
         user.setPassword("12300");
         User user1 = userService.insertOne(user);
         List<String> list = new ArrayList<>();

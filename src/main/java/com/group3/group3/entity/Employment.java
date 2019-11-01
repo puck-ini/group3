@@ -19,7 +19,10 @@ public class Employment {
 
     private String jobcity;
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     public Integer getEmid() {
         return emid;
     }
