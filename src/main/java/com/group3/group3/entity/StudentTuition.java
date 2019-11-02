@@ -10,7 +10,7 @@ public class StudentTuition {
     @Id
     private Integer uid;
 
-    private String tuid;
+    private Integer tuid;
 
     private Boolean handMoney;
 
@@ -22,11 +22,11 @@ public class StudentTuition {
         this.uid = uid;
     }
 
-    public String getTuid() {
+    public Integer getTuid() {
         return tuid;
     }
 
-    public void setTuid(String tuid) {
+    public void setTuid(Integer tuid) {
         this.tuid = tuid;
     }
 

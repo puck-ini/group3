@@ -17,7 +17,7 @@ public class Tuition {
 
     private String schoolYear;
 
-    private Double Cost;
+    private Double cost;
 
     public Integer getTuid() {
         return tuid;
@@ -44,10 +44,10 @@ public class Tuition {
     }
 
     public Double getCost() {
-        return Cost;
+        return cost;
     }
 
     public void setCost(Double cost) {
-        Cost = cost;
+        this.cost = cost;
     }
 }
