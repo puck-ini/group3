@@ -9,5 +9,7 @@ public interface CourseRepository extends JpaRepository<Course,Integer> {
 
     List<Course> findByCnameLike(String name);
 
+    List<Course> findByUid(Integer uid);
+
 
 }
