@@ -26,7 +26,10 @@ public enum ExceptionEnum {
     EXIST_STUDENTTUITION(66610,"学生的学费记录已存在"),
     EXIST_SCHOLARSHIP(66611,"该奖助贷类型已存在"),
     EXIST_STUDENTSCHOLARSHIP(66612,"该奖助贷类型已存在"),
-    EXIST_SALARY(66613,"该月薪记录已存在")
+    EXIST_SALARY(66613,"该月薪记录已存在"),
+    EXIST_STUDENTREWARD(66614,"该学生奖励记录已存在"),
+    EXIST_STUDENTACTIVITY(66615,"该学生活动记录已存在"),
+    EXIST_STUDENTINFO(66616,"该学生学籍记录已存在")
     ;
 
     private Integer code;
