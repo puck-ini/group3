@@ -148,6 +148,28 @@ public class UserController {
         return ResultUtil.success(users);
     }
 
+    @PostMapping("/insert")
+    public Result insert(HttpServletRequest request,
+                             @RequestParam(value = "username",required = false) String username,
+                             @RequestParam(value = "password",required = false) String password,
+                             @RequestParam(value = "name",required = false) String name,
+                             @RequestParam(value = "gender",required = false) String gender,
+                             @RequestParam(value = "telephone",required = false) String telephone,
+                             @RequestParam(value = "politics",required = false) String politics,
+                             @RequestParam(value = "type",required = false) String type){
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setName(name);
+        user.setGender(gender);
+        user.setTelephone(telephone);
+        user.setPolitics(politics);
+        user.setType(type);
+        User user1 = userService.insertOne(user);
+
+        return ResultUtil.success(user1);
+    }
+
 
 
 
