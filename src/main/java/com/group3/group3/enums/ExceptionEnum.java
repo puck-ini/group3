@@ -20,6 +20,8 @@ public enum ExceptionEnum {
     EXIST_DEPARTMENT(68,"部门已存在"),
     EXIST_CLASSROOM(66468,"教室已存在"),
     UNKNOWN_LOGIN(4654,"未登录"),
+    UNKNOWN_COURSE(456999,"无该课程"),
+    UNKNOWN_ROLE(999888,"无权限"),
     UNKNOWN_RESOURCE_TYPE(9999,"无该文件夹"),
 
     EXIST_TUITION(6669,"学费已存在"),
